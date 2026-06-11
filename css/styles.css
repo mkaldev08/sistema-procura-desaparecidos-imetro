@@ -1,0 +1,38 @@
+/*!
+ * Base template: Start Bootstrap - Shop Homepage v5.0.6 (MIT License)
+ * https://startbootstrap.com/template/shop-homepage
+ * Copyright 2013-2023 Start Bootstrap LLC.
+ * Customized for: Encontra-me (missing persons system).
+ */
+
+/* Person card photo: keep a consistent height across the grid */
+.card-img-top {
+    height: 240px;
+    object-fit: cover;
+}
+
+/* Placeholder shown when a record has no photo */
+.photo-placeholder {
+    height: 240px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #e9ecef;
+    color: #adb5bd;
+    font-size: 3.5rem;
+}
+
+/* Status ribbon, reusing the template's "sale badge" pattern */
+.status-badge {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    z-index: 2;
+}
+
+/* Detail page photo */
+.detail-photo {
+    height: 100%;
+    min-height: 320px;
+    object-fit: cover;
+}
