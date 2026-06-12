@@ -27,8 +27,8 @@ $currentPage = basename($_SERVER['PHP_SELF']);
 
 <body>
 
-    <!-- Navigation (template navbar, repurposed) -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container">
             <a class="navbar-brand fw-bold" href="index.php">
                 <i class="bi-search-heart me-1"></i>Encontra-me
@@ -49,7 +49,7 @@ $currentPage = basename($_SERVER['PHP_SELF']);
                     <span class="navbar-text text-white-50 me-3">
                         <i class="bi-person-check me-1"></i><?= e($_SESSION['username']) ?>
                     </span>
-                    <a class="btn btn-outline-light me-3" href="register.php">
+                    <a class="btn btn-primary me-3" href="register.php">
                         <i class="bi-plus-circle me-1"></i>Registar desaparecido
                     </a>
                     <a class="btn btn-outline-secondary btn-sm me-1" href="logout.php">

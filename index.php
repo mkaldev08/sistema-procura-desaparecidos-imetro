@@ -76,10 +76,11 @@ $pageTitle = 'Procurar desaparecidos';
 require __DIR__ . '/includes/header.php';
 ?>
 
-    <!-- Cabeçalho com barra de pesquisa integrada -->
-    <header class="bg-dark py-5">
+    <!-- Hero com barra de pesquisa integrada -->
+    <header class="site-hero py-5">
         <div class="container px-4 px-lg-5 my-4">
             <div class="text-center text-white mb-4">
+                <span class="hero-eyebrow">Sistema nacional de desaparecidos</span>
                 <h1 class="display-5 fw-bolder">
                     <i class="bi-search-heart me-2"></i>Encontra-me
                 </h1>
@@ -102,7 +103,7 @@ require __DIR__ . '/includes/header.php';
                     </select>
                 </div>
                 <div class="col-md-2 d-grid">
-                    <button type="submit" class="btn btn-light btn-lg">
+                    <button type="submit" class="btn btn-primary btn-lg">
                         <i class="bi-search me-1"></i>Procurar
                     </button>
                 </div>
@@ -113,6 +114,11 @@ require __DIR__ . '/includes/header.php';
     <!-- Lista de registos com paginação -->
     <section class="py-5">
         <div class="container px-4 px-lg-5 mt-2">
+
+            <div class="mb-4">
+                <div class="section-title-bar"></div>
+                <h4 class="fw-bold mb-0">Registos</h4>
+            </div>
 
             <p class="text-muted">
                 <?= $totalRows ?> registo(s) encontrado(s)

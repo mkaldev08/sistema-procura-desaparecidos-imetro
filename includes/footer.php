@@ -1,12 +1,13 @@
     </main>
 
-    <!-- Footer (template footer, repurposed) -->
-    <footer class="py-5 bg-dark">
+    <!-- Footer -->
+    <footer class="site-footer py-5">
         <div class="container">
             <p class="m-0 text-center text-white">
-                <i class="bi-search-heart me-1"></i>Encontra-me &mdash; Sistema de procura de desaparecidos
+                <i class="bi-search-heart brand-icon me-1"></i>
+                <strong>Encontra-me</strong> &mdash; Sistema de procura de desaparecidos
             </p>
-            <p class="m-0 text-center text-white">
+            <p class="m-0 text-center text-white-50 small mt-1">
                 &copy; 2026 &mdash; GRUPO Nº 04
             </p>
         </div>

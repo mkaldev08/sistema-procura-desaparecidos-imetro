@@ -1,9 +1,125 @@
 /*!
  * Base template: Start Bootstrap - Shop Homepage v5.0.6 (MIT License)
  * https://startbootstrap.com/template/shop-homepage
- * Copyright 2013-2023 Start Bootstrap LLC.
  * Customized for: Encontra-me (missing persons system).
+ * Rebranding: red-urgency theme, 2026.
  */
+
+/* ── Brand tokens ─────────────────────────────────────────── */
+:root {
+    --brand:       #c0392b;
+    --brand-dark:  #962d22;
+    --brand-light: #e74c3c;
+    --site-dark:   #1a1a1a;
+    --site-gray:   #f8f9fa;
+}
+
+/* ── Bootstrap overrides ──────────────────────────────────── */
+
+/* Primary buttons → brand red */
+.btn-primary {
+    background-color: var(--brand);
+    border-color: var(--brand);
+}
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
+    background-color: var(--brand-dark);
+    border-color: var(--brand-dark);
+}
+.btn-primary:focus-visible {
+    box-shadow: 0 0 0 0.25rem rgba(192, 57, 43, 0.4);
+}
+
+/* Outline-dark card button → red tint on hover */
+.btn-outline-dark:hover {
+    background-color: var(--brand);
+    border-color: var(--brand);
+    color: #fff;
+}
+
+/* Outline-light nav button → red fill on hover */
+.btn-outline-light:hover {
+    background-color: var(--brand);
+    border-color: var(--brand);
+}
+
+/* Pagination active → brand red */
+.page-link:focus { box-shadow: 0 0 0 0.25rem rgba(192, 57, 43, 0.25); }
+.page-item.active .page-link {
+    background-color: var(--brand);
+    border-color: var(--brand);
+}
+.page-link { color: var(--brand); }
+.page-link:hover { color: var(--brand-dark); }
+
+/* Form focus rings → brand red */
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--brand-light);
+    box-shadow: 0 0 0 0.25rem rgba(192, 57, 43, 0.2);
+}
+
+/* ── Navbar ───────────────────────────────────────────────── */
+.navbar {
+    background-color: var(--site-dark) !important;
+    border-bottom: 3px solid var(--brand);
+}
+
+.navbar-brand {
+    font-size: 1.35rem;
+    letter-spacing: 0.03em;
+}
+
+.navbar-brand .bi-search-heart {
+    color: var(--brand-light);
+}
+
+/* ── Hero banner ──────────────────────────────────────────── */
+.site-hero {
+    background: linear-gradient(135deg, var(--site-dark) 0%, #3d1010 60%, var(--brand-dark) 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.site-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+        -45deg,
+        transparent,
+        transparent 40px,
+        rgba(255,255,255,0.015) 40px,
+        rgba(255,255,255,0.015) 80px
+    );
+}
+
+.site-hero .container { position: relative; z-index: 1; }
+
+.site-hero .hero-eyebrow {
+    display: inline-block;
+    background: var(--brand);
+    color: #fff;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 0.25rem 0.75rem;
+    border-radius: 2px;
+    margin-bottom: 1rem;
+}
+
+/* ── Cards ────────────────────────────────────────────────── */
+.card {
+    border: 1px solid #dee2e6;
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12) !important;
+}
 
 /* Person card photo: keep a consistent height across the grid */
 .card-img-top {
@@ -17,17 +133,19 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #e9ecef;
-    color: #adb5bd;
+    background: #f0eded;
+    color: #c0b0b0;
     font-size: 3.5rem;
 }
 
-/* Status ribbon, reusing the template's "sale badge" pattern */
+/* Status ribbon */
 .status-badge {
     position: absolute;
     top: 0.5rem;
     right: 0.5rem;
     z-index: 2;
+    font-size: 0.75rem;
+    letter-spacing: 0.04em;
 }
 
 /* Detail page photo */
@@ -36,3 +154,21 @@
     min-height: 320px;
     object-fit: cover;
 }
+
+/* ── Section divider ──────────────────────────────────────── */
+.section-title-bar {
+    display: inline-block;
+    width: 40px;
+    height: 3px;
+    background: var(--brand);
+    border-radius: 2px;
+    margin-bottom: 1rem;
+}
+
+/* ── Footer ───────────────────────────────────────────────── */
+.site-footer {
+    background-color: var(--site-dark) !important;
+    border-top: 3px solid var(--brand);
+}
+
+.site-footer .brand-icon { color: var(--brand-light); }
