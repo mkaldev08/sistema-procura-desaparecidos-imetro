@@ -104,6 +104,6 @@ function estaAutenticado(): bool
 function exigirAutenticacao(): void
 {
     if (!estaAutenticado()) {
-        redirect('register-user.php');
+        redirect('login.php');
     }
 }
